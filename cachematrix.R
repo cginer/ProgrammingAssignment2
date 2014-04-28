@@ -1,14 +1,18 @@
 ## Put comments here that give an overall description of what your
-## functions do
+## functions do:
+## With this two functions we can create a special matrix object that
+## contains the matrix and also its inverse when it has been calculated
+## the first time. This is useful to avoid computing many times the same
+## value with a potentialy time-consuming process.
 
 ## Write a short comment describing this function:
-## Here we define the function to create an object that contains 
-## information about a matrix and also its inverse. This object
-## contains 4 functions: "set" that it's used when creating the 
-## object; "get" that allows you to retrieve the simple matrix; 
-## "setinverse" that can store the value of its inverse; and
-## "getinverse" that allows you to retrieve the inverse if it
-## has been calculated (if not it is set to NULL);
+## "makeCacheMatrix" creates an object that contains information about a 
+## matrix and also its inverse. This object contains 4 functions: "set" 
+## that it's used when creating the object; "get" that allows you to 
+## retrieve the simple matrix; "setinverse" that can store the value of
+## its inverse; and "getinverse" that allows you to retrieve the inverse
+## if it has been calculated (if not it is set to NULL);
+
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
     set <- function(y){
